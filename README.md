@@ -1,2 +1,0 @@
-# algoPractice
-basic algorithms
