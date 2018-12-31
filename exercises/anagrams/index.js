@@ -7,7 +7,7 @@
 //   anagrams('rail safety', 'fairy tales') --> True
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
-
+ 
 function anagrams(stringA, stringB) {
     let str1 = stringA.toLowerCase().replace(/[^a-z]+/g, '').split('');
     let str2 = stringB.toLowerCase().replace(/[^a-z]+/g, '').split('');

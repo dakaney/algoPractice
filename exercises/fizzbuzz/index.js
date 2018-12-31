@@ -11,7 +11,7 @@
 //   fizz
 //   4
 //   buzz
-
+ 
 function fizzBuzz(n) {
     let i = 1;
     while (i <= n) {
