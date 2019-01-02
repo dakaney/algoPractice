@@ -26,28 +26,23 @@ function matrix(n) {
     let start = 0;
     let end = n;
     let i = 1;
-    while (i < n*n) {
+    while (i <= n*n) {
         grid[row][col] = i;
-        if (col < end - 1 && direction === 1) {
-            col++;
-        } else if (row < end - 1 && direction === 1) {
-            row++;
+        if ((col < end - 1 && direction === 1) || (col > start && direction === -1)) {
+            col = col + direction;
+        } else if ((row < end - 1 && direction === 1) || (row > start + 1 && direction === -1)) {
+            row = row + direction;
         } else if (direction === 1) {
             direction = -1;
-        }
-        if (col > start && direction === -1) {
-            col--;
-        } else if (row > start + 1 && direction === -1) {
-            row--;
-        } else if (direction === -1){
-            direction = 1;
-            end -= 1;
-            start += 1;
-            i--;
+            col -= 1;
+        } else if (direction === -1) {
+          direction = 1;
+          end -= 1;
+          start += 1;
+          i--;
         }
         i++;
     }
-    grid[row][col] = i;
     return grid;
 }
 
