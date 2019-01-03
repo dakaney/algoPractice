@@ -10,6 +10,19 @@
 //   s.pop(); // returns 2
 //   s.pop(); // returns 1
 
-class Stack {}
+class Stack {
+    constructor() {
+        this.storage = [];
+    }
+    push(value) {
+        this.storage.push(value);
+    }
+    pop() {
+        return this.storage.pop();
+    }
+    peek() {
+        return this.storage[this.storage.length - 1];
+    }
+}
 
 module.exports = Stack;
