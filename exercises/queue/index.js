@@ -17,8 +17,7 @@ class Queue {
         this.storage.unshift(value);
     }
     remove () {
-        let removed = this.storage.pop();
-        return removed;
+        return this.storage.pop();
     }
 }
 
