@@ -11,6 +11,18 @@
 //    list.insertLast('d');
 //    fromLast(list, 2).data // 'b'
 
-function fromLast(list, n) {}
+function fromLast(list, n) {
+    let gapLast= list.head;
+    let gapCur = list.head;
+    while (gapLast.next) {
+        if (n === 0) {
+            gapCur = gapCur.next;
+        } else {
+            n--;
+        }
+        gapLast = gapLast.next;
+    }
+    return gapCur;
+}
 
 module.exports = fromLast;
