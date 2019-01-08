@@ -23,6 +23,26 @@ class Node {
     }
 }
 
-class Tree {}
+class Tree {
+    constructor() {
+        this.root = null;
+    }
+    traverseBF(fn) {
+        let storage = [this.root];
+        while (storage.length) {
+            let current = storage.shift();
+            storage.push(...current.children);
+            fn(current)
+        }
+    }
+    traverseDF(fn) {
+        let storage = [this.root];
+        while (storage.length) {
+            let current = storage.shift();
+            storage.unshift(...current.children);
+            fn(current);
+        }
+    }
+}
 
 module.exports = { Tree, Node };
