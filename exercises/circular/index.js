@@ -15,7 +15,7 @@
 function circular(list) {
     let fast = list.head.next;
     let slow = list.head;
-    while (fast) {
+    while (fast.next && fast.next.next) {
         if (fast === slow) {
             return true;
         }

@@ -12,7 +12,14 @@
 
 class Node {
     constructor(data) {
-        let data = data;
+        this.data = data;
+        this.children = [];
+    }
+    add(data) {
+        this.children.push(new Node(data));
+    }
+    remove(data) {
+        this.children = this.children.filter(e => e.data !== data)
     }
 }
 
