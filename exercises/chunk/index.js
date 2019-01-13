@@ -18,5 +18,4 @@ function chunk(array, size) {
     return res;
 }
 
-
 module.exports = chunk;
