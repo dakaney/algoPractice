@@ -10,6 +10,7 @@ function selectionSort(arr) {
 
 }
 
+
 function mergeSort(arr) {
 
 }
